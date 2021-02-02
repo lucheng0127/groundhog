@@ -1,0 +1,160 @@
+<mxfile host="65bd71144e" modified="2021-02-02T08:10:48.155Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.50.0 Chrome/83.0.4103.122 Electron/9.2.1 Safari/537.36" etag="-qFBMlv3MWRiQKo_26Zz" version="13.10.0" type="embed" pages="2">
+    <diagram id="9XT3ygNG1vjvjne0kZYB" name="network topology">
+        <mxGraphModel dx="868" dy="1708" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#F1FAEE" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="&lt;b style=&quot;text-align: center ; font-size: 16px&quot;&gt;DC Router&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;sketch=0;strokeColor=#457B9D;fillColor=#A8DADC;fontColor=#1D3557;verticalAlign=top;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="400" y="-80" width="640" height="520" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" value="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;Kernel&lt;/b&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;sketch=0;strokeColor=#457B9D;fontColor=#1D3557;fillColor=#E6FFCC;align=left;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="425" y="10" width="595" height="430" as="geometry"/>
+                </mxCell>
+                <mxCell id="46" value="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;Protocol Layer&lt;/b&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;sketch=0;strokeColor=#457B9D;fontColor=#1D3557;align=left;verticalAlign=top;fillColor=#FFFFFF;" vertex="1" parent="1">
+                    <mxGeometry x="440" y="120" width="560" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="oHHUBTW3C_T3Oqk4Dv3I-44" value="" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=1;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=none;endArrow=none;endFill=0;strokeColor=#457B9D;strokeWidth=2;fillColor=#A8DADC;fontColor=#000000;" parent="1" source="7" target="39" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;enp0s1&lt;br&gt;pub ip&lt;br&gt;&lt;/b&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;sketch=0;strokeColor=#457B9D;fontColor=#1D3557;fillColor=#B3B3B3;" parent="1" vertex="1">
+                    <mxGeometry x="520" y="400" width="160" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=1;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;strokeColor=#457B9D;fillColor=#A8DADC;fontColor=#1D3557;strokeWidth=2;endArrow=none;endFill=0;" parent="1" source="8" target="12" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;enp0s2&lt;br&gt;DC subnet Gateway&lt;br&gt;&lt;/b&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;sketch=0;strokeColor=#457B9D;fontColor=#1D3557;fillColor=#B3B3B3;" parent="1" vertex="1">
+                    <mxGeometry x="760" y="400" width="160" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;Link Layer&lt;/b&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;sketch=0;strokeColor=#457B9D;fillColor=#B3B3B3;fontColor=#1D3557;align=left;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="440" y="300" width="560" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="&lt;b&gt;&lt;font style=&quot;font-size: 16px&quot;&gt;DC&lt;br&gt;DC subnet ip&lt;br&gt;&lt;/font&gt;&lt;/b&gt;" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;rounded=0;sketch=0;strokeColor=#457B9D;fontColor=#1D3557;fillColor=#FFE6CC;" parent="1" vertex="1">
+                    <mxGeometry x="760" y="560" width="160" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;bridge check&lt;/b&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;sketch=0;fontColor=#1D3557;" parent="1" vertex="1">
+                    <mxGeometry x="655" y="360" width="130" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="&lt;font&gt;&lt;b&gt;&lt;span style=&quot;font-size: 16px&quot;&gt;Network Layer&lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;span style=&quot;font-size: 16px&quot;&gt;iptables policy:&lt;br&gt;enp0s1 masqurade&lt;br&gt;sip: vpn subnet, dip: dc subnet&amp;nbsp; snat -&amp;gt; dc subnet gw&lt;br&gt;sip: dc subnet, dip: vpn subnet snat -&amp;gt; vpn subnet gw&lt;br&gt;&lt;/span&gt;&lt;/b&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;sketch=0;strokeColor=#457B9D;fontColor=#1D3557;fillColor=#CCFFFF;align=left;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="440" y="170" width="560" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;bridge destination&lt;/b&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;sketch=0;fontColor=#1D3557;" parent="1" vertex="1">
+                    <mxGeometry x="642.5" y="320" width="155" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;routing destination&lt;/b&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;sketch=0;fontColor=#1D3557;" parent="1" vertex="1">
+                    <mxGeometry x="642.5" y="200" width="155" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;tun0&lt;br&gt;vpn subnet gateway&lt;br&gt;&lt;/b&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;sketch=0;strokeColor=#457B9D;fontColor=#1D3557;fillColor=#B3B3B3;" parent="1" vertex="1">
+                    <mxGeometry x="840" y="170" width="160" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" value="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;User space&lt;/b&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;sketch=0;strokeColor=#457B9D;fontColor=#1D3557;align=left;verticalAlign=top;fillColor=#FFFFCC;" parent="1" vertex="1">
+                    <mxGeometry x="425" y="-40" width="595" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="36" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=1;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;strokeColor=#457B9D;fillColor=#A8DADC;fontColor=#1D3557;strokeWidth=2;endArrow=none;endFill=0;" parent="1" source="24" target="25" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="723" y="80"/>
+                            <mxPoint x="920" y="80"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="33" value="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;Groundhog&lt;/b&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;sketch=0;strokeColor=#457B9D;fontColor=#1D3557;fillColor=#FFCCCC;" parent="1" vertex="1">
+                    <mxGeometry x="647.5" y="-25" width="150" height="35" as="geometry"/>
+                </mxCell>
+                <mxCell id="37" value="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;AP groundhog client&lt;br&gt;&lt;br&gt;dip: dc subnet via tun0&lt;br&gt;&lt;/b&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;sketch=0;strokeColor=#457B9D;fontColor=#1D3557;align=left;verticalAlign=top;fillColor=#CCFF99;" parent="1" vertex="1">
+                    <mxGeometry x="180" y="560" width="320" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="43" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=1;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;strokeColor=#457B9D;fillColor=#A8DADC;fontColor=#1D3557;dashed=1;strokeWidth=2;endArrow=none;endFill=0;" parent="1" source="38" target="7" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="44" value="&lt;font color=&quot;#000000&quot; style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;UDP&lt;br&gt;socket&lt;br&gt;&lt;/b&gt;&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontColor=#1D3557;labelBackgroundColor=none;" parent="43" vertex="1" connectable="0">
+                    <mxGeometry x="-0.0759" y="5" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="38" value="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;tun0&lt;br&gt;vpn subnet ip&lt;br&gt;&lt;/b&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;sketch=0;strokeColor=#457B9D;fontColor=#1D3557;fillColor=#B3B3B3;" parent="1" vertex="1">
+                    <mxGeometry x="330" y="640" width="160" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="42" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=1;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;strokeColor=#457B9D;fillColor=#A8DADC;fontColor=#1D3557;strokeWidth=2;endArrow=none;endFill=0;" parent="1" source="39" target="7" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="39" value="" style="aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;fontColor=#4277BB;labelBackgroundColor=#ffffff;fontSize=12;spacingTop=3;image;image=img/lib/ibm/vpc/Router.svg;rounded=0;sketch=0;strokeColor=#457B9D;fillColor=#CCFF99;" parent="1" vertex="1">
+                    <mxGeometry x="570" y="480" width="60" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="41" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=1;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;strokeColor=#457B9D;fillColor=#A8DADC;fontColor=#1D3557;strokeWidth=2;endArrow=none;endFill=0;" parent="1" source="40" target="39" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="40" value="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;enp0s3&lt;br&gt;&lt;/b&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;sketch=0;strokeColor=#457B9D;fontColor=#1D3557;fillColor=#B3B3B3;" parent="1" vertex="1">
+                    <mxGeometry x="340" y="720" width="160" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;VFS&lt;/b&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;sketch=0;strokeColor=#457B9D;fontColor=#1D3557;align=left;verticalAlign=top;fillColor=#E5CCFF;" parent="1" vertex="1">
+                    <mxGeometry x="440" y="60" width="560" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="34" value="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;UDP socket&lt;/b&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;sketch=0;fontColor=#1D3557;" parent="1" vertex="1">
+                    <mxGeometry x="545" y="80" width="110" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;/dev/net/tun(fd)&lt;/b&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;sketch=0;fontColor=#1D3557;" parent="1" vertex="1">
+                    <mxGeometry x="855" y="80" width="130" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="oHHUBTW3C_T3Oqk4Dv3I-50" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=1;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=none;endArrow=none;endFill=0;strokeColor=#457B9D;strokeWidth=2;fillColor=#A8DADC;fontColor=#000000;dashed=1;" parent="1" source="34" target="23" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="oHHUBTW3C_T3Oqk4Dv3I-47" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=1;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;labelBackgroundColor=none;endArrow=none;endFill=0;strokeColor=#457B9D;strokeWidth=2;fillColor=#A8DADC;fontColor=#000000;" parent="1" source="34" target="20" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="600" y="170"/>
+                            <mxPoint x="600" y="170"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="oHHUBTW3C_T3Oqk4Dv3I-46" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=1;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;labelBackgroundColor=none;endArrow=none;endFill=0;strokeColor=#457B9D;strokeWidth=2;fillColor=#A8DADC;fontColor=#000000;" parent="1" source="23" target="25" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="35" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=1;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#457B9D;fillColor=#A8DADC;fontColor=#1D3557;strokeWidth=2;endArrow=none;endFill=0;" parent="1" target="34" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="723" y="40"/>
+                            <mxPoint x="600" y="40"/>
+                        </Array>
+                        <mxPoint x="723" y="10" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="45" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=1;sketch=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;strokeColor=#457B9D;fillColor=#A8DADC;fontColor=#1D3557;strokeWidth=2;endArrow=none;endFill=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="33" target="25">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="723" y="40"/>
+                            <mxPoint x="920" y="40"/>
+                        </Array>
+                        <mxPoint x="722.5" y="10" as="sourcePoint"/>
+                        <mxPoint x="920" y="110" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="oHHUBTW3C_T3Oqk4Dv3I-52" value="&lt;font style=&quot;font-size: 16px&quot; color=&quot;#0000ff&quot;&gt;&lt;b&gt;Groundhog forward data between socket and tun0&lt;/b&gt;&lt;/font&gt;" style="text;html=1;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;sketch=0;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="647.5" y="80" width="210" height="70" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="qrd_Wx92Hdg8H5L7MCi2" name="protocol">
+        <mxGraphModel dx="868" dy="608" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#F1FAEE" math="0" shadow="0">
+            <root>
+                <mxCell id="mP5egnpstgcwZ81Y0YLI-0"/>
+                <mxCell id="mP5egnpstgcwZ81Y0YLI-1" parent="mP5egnpstgcwZ81Y0YLI-0"/>
+                <mxCell id="mP5egnpstgcwZ81Y0YLI-11" value="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;FLAG&lt;br&gt;1 octets&lt;/b&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;sketch=0;strokeColor=#457B9D;fontColor=#000000;fillColor=#FFCCCC;" parent="mP5egnpstgcwZ81Y0YLI-1" vertex="1">
+                    <mxGeometry width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="mP5egnpstgcwZ81Y0YLI-12" value="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;INDEX&lt;br&gt;1 octets&lt;/b&gt;&lt;/font&gt;&lt;span style=&quot;color: rgba(0 , 0 , 0 , 0) ; font-family: monospace ; font-size: 0px&quot;&gt;%3CmxGraphModel%3E%3Croot%3E%3CmxCell%20id%3D%220%22%2F%3E%3CmxCell%20id%3D%221%22%20parent%3D%220%22%2F%3E%3CmxCell%20id%3D%222%22%20value%3D%22%26lt%3Bfont%20style%3D%26quot%3Bfont-size%3A%2016px%26quot%3B%26gt%3B%26lt%3Bb%26gt%3BFLG%26lt%3Bbr%26gt%3B1%20octets%26lt%3B%2Fb%26gt%3B%26lt%3B%2Ffont%26gt%3B%22%20style%3D%22rounded%3D0%3BwhiteSpace%3Dwrap%3Bhtml%3D1%3Bsketch%3D0%3BstrokeColor%3D%23457B9D%3BfillColor%3D%23A8DADC%3BfontColor%3D%23000000%3B%22%20vertex%3D%221%22%20parent%3D%221%22%3E%3CmxGeometry%20width%3D%22120%22%20height%3D%2240%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3C%2Froot%3E%3C%2FmxGraphModel%3E&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;sketch=0;strokeColor=#457B9D;fontColor=#000000;fillColor=#FFFFCC;" parent="mP5egnpstgcwZ81Y0YLI-1" vertex="1">
+                    <mxGeometry x="120" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="mP5egnpstgcwZ81Y0YLI-13" value="&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;LENGTH&lt;br&gt;2 octets&lt;/b&gt;&lt;/font&gt;&lt;span style=&quot;color: rgba(0 , 0 , 0 , 0) ; font-family: monospace ; font-size: 0px&quot;&gt;%3CmxGraphModel%3E%3Croot%3E%3CmxCell%20id%3D%220%22%2F%3E%3CmxCell%20id%3D%221%22%20parent%3D%220%22%2F%3E%3CmxCell%20id%3D%222%22%20value%3D%22%26lt%3Bfont%20style%3D%26quot%3Bfont-size%3A%2016px%26quot%3B%26gt%3B%26lt%3Bb%26gt%3BFLG%26lt%3Bbr%26gt%3B1%20octets%26lt%3B%2Fb%26gt%3B%26lt%3B%2Ffont%26gt%3B%22%20style%3D%22rounded%3D0%3BwhiteSpace%3Dwrap%3Bhtml%3D1%3Bsketch%3D0%3BstrokeColor%3D%23457B9D%3BfillColor%3D%23A8DADC%3BfontColor%3D%23000000%3B%22%20vertex%3D%221%22%20parent%3D%221%22%3E%3CmxGeometry%20width%3D%22120%22%20height%3D%2240%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3C%2Froot%3E%3C%2FmxGraphModel%3E&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;sketch=0;strokeColor=#457B9D;fontColor=#000000;fillColor=#CCFFCC;" parent="mP5egnpstgcwZ81Y0YLI-1" vertex="1">
+                    <mxGeometry x="240" width="240" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="mP5egnpstgcwZ81Y0YLI-14" value="&lt;span style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;PAYLOAD(1~1468 octets)&lt;/b&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;sketch=0;strokeColor=#457B9D;fillColor=#A8DADC;fontColor=#000000;" parent="mP5egnpstgcwZ81Y0YLI-1" vertex="1">
+                    <mxGeometry x="480" width="240" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="mP5egnpstgcwZ81Y0YLI-15" value="&lt;ul&gt;&lt;li&gt;&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;FLAG 数据包类型，包括（HEART，AUTH，DATA）。不同类型对应不同的package handler&lt;/b&gt;&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;INDEX 分片序号，从0x00～0xFF依次递增，最多支持256个分片。0xFF代表最后一个分片，如果index不是0xFF将数据包payload放入接收buf，直至收到0xFF的分片后将所有的数据合并并尝试解密。如果解密失败（有分片数据包丢失或乱序）将buf中数据都丢弃。&lt;/b&gt;&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;LENGTH payload的长度&lt;/b&gt;&lt;/font&gt;&lt;/li&gt;&lt;li&gt;&lt;font style=&quot;font-size: 16px&quot;&gt;&lt;b&gt;PAYLOAD 数据1～1468字节（1500 - 20 -8 - 4）&lt;/b&gt;&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;" style="rounded=0;whiteSpace=wrap;html=1;sketch=0;strokeColor=#457B9D;fontColor=#000000;fillColor=#FFFFFF;align=left;verticalAlign=top;" parent="mP5egnpstgcwZ81Y0YLI-1" vertex="1">
+                    <mxGeometry y="80" width="720" height="160" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
