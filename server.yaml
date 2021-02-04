@@ -1,0 +1,5 @@
+mode: server
+server:
+  subnet: 10.10.0.0/16
+  iface: enp0s1
+  vpnEnable: false
