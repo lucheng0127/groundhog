@@ -12,7 +12,7 @@ import (
 var debug, showVersion bool
 var cfgFile, logFile string
 
-// VERSION of groundhog
+// VERSION : Version of groundhog
 var VERSION = "0.0.1-dev"
 
 func main() {
@@ -41,7 +41,7 @@ func main() {
 	}
 	checkErr := func(err error) {
 		if err != nil {
-			logger.Error(err)
+			logger.Error(fmt.Sprintf("%+v\n", err))
 			os.Exit(1)
 		}
 	}

@@ -8,9 +8,11 @@ import (
 
 //ServerConfig configure of server
 type ServerConfig struct {
-	Subnet      string `yaml:"subnet"`
+	Port        int    `yaml:"port"`
+	IPAddr      string `yaml:"ipAddr"`
 	PubnetIface string `yaml:"iface"`
 	VPNEnable   bool   `yaml:"vpnEnable"`
+	MTU         int    `yaml:"mtu"`
 }
 
 // ClientConfig configure of client
