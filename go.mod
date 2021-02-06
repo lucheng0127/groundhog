@@ -7,5 +7,7 @@ replace github/lucheng0127/groundhog => ./
 require (
 	github.com/pkg/errors v0.9.1
 	github.com/sirupsen/logrus v1.7.0
+	github.com/songgao/water v0.0.0-20200317203138-2b4b6d7c09d8
+	github.com/vishvananda/netlink v1.1.0
 	gopkg.in/yaml.v2 v2.4.0
 )
