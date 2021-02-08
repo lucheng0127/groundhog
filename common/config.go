@@ -17,6 +17,9 @@ type ServerConfig struct {
 
 // ClientConfig configure of client
 type ClientConfig struct {
+	ServerAddr string `yaml:"serverAddr"`
+	SecretKey  string `yaml:"key"`
+	LocalAddr  string `yaml:"localAddr"`
 }
 
 // GroundhogConfig configure of groundhog

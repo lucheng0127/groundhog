@@ -1,7 +1,7 @@
 mode: server
 server:
-  ipAddr: 192.168.13.1/24
+  ipAddr: 192.168.13.1/24 # VPN subnet gateway ip
   iface: enp0s1
   vpnEnable: false
   mtu: 1500
-  port: 5001
+  port: 5001 # Listen up port

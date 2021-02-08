@@ -13,7 +13,7 @@ import (
 	"github.com/lucheng0127/groundhog/common"
 )
 
-// Server struct of server
+// Server : struct of server
 type Server struct {
 	sync.Mutex
 	iface         *water.Interface

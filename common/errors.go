@@ -38,3 +38,13 @@ func UDPConnectionError(eMsg string) error {
 func IfaceReadError(eMsg string) error {
 	return errors.New(eMsg)
 }
+
+// ClientError : Errors of UDP cient
+func ClientError(eMsg string) error {
+	return errors.New(eMsg)
+}
+
+// AuthError : Errors of do authorize
+func AuthError(eMsg string) error {
+	return errors.New(eMsg)
+}

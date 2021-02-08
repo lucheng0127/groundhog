@@ -11,6 +11,8 @@ const (
 	GHFlagAuth     uint8 = 0x04 // Auth request
 	GHFlagData     uint8 = 0x08 // Data package
 	GHFlagClose    uint8 = 0x10 // Close connection request
+
+	GHPKGEND uint8 = 0xFF // End of package segment
 )
 
 type groundhogHeader struct {
@@ -20,6 +22,6 @@ type groundhogHeader struct {
 }
 
 type groundhogPackage struct {
-	groundhogHeader
+	header  *groundhogHeader
 	payload []byte
 }

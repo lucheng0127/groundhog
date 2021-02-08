@@ -1,0 +1,5 @@
+mode: client
+client:
+  serverAddr: 192.168.0.105:5001 # Server listen addr: pub_ip:port
+  localAddr: 0.0.0.0:5002 # Communicate port, fixed for support distributed if need
+  key: heyWhatUp
