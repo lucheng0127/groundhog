@@ -1,6 +1,6 @@
 mode: server
 server:
-  ipAddr: 10.10.0.1/16
+  ipAddr: 192.168.13.1/24
   iface: enp0s1
   vpnEnable: false
   mtu: 1500
